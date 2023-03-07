@@ -7,6 +7,7 @@ import go from "../assets/goblue.png";
 import node from "../assets/node.png";
 import tailwind from "../assets/tailwind.png";
 import github from "../assets/github.png";
+import redux from '../assets/redux.png';
 
 
 const Experience = () => {
@@ -60,7 +61,13 @@ const Experience = () => {
             title: 'Github',
             style: 'shadow-gray-400'
         },
-    ]
+        {
+            id:9,
+            src: redux,
+            title: 'Redux',
+            style: 'shadow-purple-400'
+        },
+    ];
 
     return (
         <div name="experience" className="bg-gradient-to-b from-gray-800 to-black w-full h-screen">
@@ -75,8 +82,8 @@ const Experience = () => {
                    <p className="py-6">These are the technologies I've worked with</p>
                </div>
 
-              <div className="w-full grid grid-col-2 sm:grid-cols-3 gap-8 text-center
-              py-8 px-12 sm:px-0">
+              <div className="w-full grid grid-col-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center
+              py-8 px-4 md:px-12">
 
                   {
                       technologies.map(({id, src, title, style}) => (
@@ -90,7 +97,7 @@ const Experience = () => {
             </div>
             
         </div>
-    )
-}
+    );
+};
 
-export default Experience
+export default Experience;
